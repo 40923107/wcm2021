@@ -135,6 +135,42 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W2 << <a href='W2.html'>Previous</a> <a href='W3.html'>Next</a> >> W3<br /><h1>CMSIMDE</h1>
+<h4><strong>About</strong></h4>
+<p>Repository:<a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></p>
+<p>Github Pages:<a href="https://40923107.github.io/wcm2021/content/index.html">https://40923107.github.io/wcm2021/content/index.html</a></p>
+<p>利用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站</p>
+<ol>
+<li>登入 Github 帳號</li>
+<li>將瀏覽器指向<span> <a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></span></li>
+<li>利用<span> </span><span>Use this template</span><span> </span>建立倉儲</li>
+</ol>
+<p>clone 帶有 CMSiMDE 的指令:</p>
+<div>
+<div class="syntaxhighlighter js" id="highlighter_298274">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js plain">git clone --recurse-submodules URL</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>上述 URL 即為希望將倉儲資料取下進行改版的 Github 倉儲網路統一資源位置, 也就是 Github 倉儲網址.</p>
+<p>每一個以 cmstemplate 為 template 的倉儲, 其根目錄都帶有:</p>
+<ol>
+<li><span style="background-color: #ffff00;">init.py</span><span> </span>- 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號.</li>
+<li><span style="background-color: #ffff00;">http-server.py</span><span> </span>- 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
+<li><span style="background-color: #ffff00;">cms.bat </span>- 讓使用者執行動態網站用的批次檔案.</li>
+<li><span style="background-color: #ffff00;">acp.bat</span><span> </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
+</ol>
 <h4><strong>基本操作</strong></h4>
 <p><span>利用 cms.bat 啟用動態網站，並利用<a>https://localhost:9443</a><span><span> </span>在近端</span>維護網站內容，不過動態網站只能在 localhost 啟動, 因此可以用內建的管理者密碼 "admin" 登入管理網站內容.</span></p>
 <p><span>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 <span>config</span><span><span> </span>指令修改管理者密碼.</span></span></p>
