@@ -46,26 +46,26 @@
 <p>上述 URL 即為希望將倉儲資料取下進行改版的 Github 倉儲網路統一資源位置, 也就是 Github 倉儲網址.</p>
 <p>每一個以 cmstemplate 為 template 的倉儲, 其根目錄都帶有:</p>
 <ol>
-<li><span style="background-color: #ffff00;">init.py</span><span> </span>- 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號.</li>
-<li><span style="background-color: #ffff00;">http-server.py</span><span> </span>- 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
-<li><span style="background-color: #ffff00;">cms.bat </span>- 讓使用者執行動態網站用的批次檔案.</li>
-<li><span style="background-color: #ffff00;">acp.bat</span><span> </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
+<li>init.py - 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號.</li>
+<li>http-server.py - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
+<li>cms.bat - 讓使用者執行動態網站用的批次檔案.</li>
+<li>acp.bat<span> </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
 </ol>
 <h4>基本操作</h4>
 <p>利用 cms.bat 啟用動態網站，並利用<a>https://localhost:9443</a> 在近端維護網站內容，不過動態網站只能在 localhost 啟動, 因此可以用內建的管理者密碼 "admin" 登入管理網站內容.</p>
 <p>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 config 指令修改管理者密碼.</p>
 <p>動態網站編輯表單中的 config 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p>
-<h4>編輯網站內容</h4>
-<p>透過表單中的<span> </span><span style="background-color: #ffff00;">Edit All</span><span> </span>或<span> </span><span style="background-color: #ffff00;">Edit</span><span> </span>按鈕進行.<span> </span><span style="background-color: #ffff00;">Edit</span><span> </span>用在單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的<span> </span><span>Edit</span><span> </span>按鈕進入該頁面的編輯模式.</p>
-<p><span style="background-color: #ffff00;">Edit All</span><span> </span>通常用在單次刪除所有頁面內容或只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中。</p>
-<h4>上傳與引用檔案</h4>
+<h5>編輯網站內容</h5>
+<p>透過表單中的 Edit All<span> </span>或 Edit 按鈕進行. Edit<span> </span>用在單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的<span> </span><span>Edit</span><span> </span>按鈕進入該頁面的編輯模式.</p>
+<p>Edit All<span> </span>通常用在單次刪除所有頁面內容或只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中。</p>
+<h5>上傳與引用檔案</h5>
 <p>File Upload 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
-<h4>上傳與引用圖片</h4>
+<h5>上傳與引用圖片</h5>
 <p>Image Upload 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p><span><img caption="false" height="267" src="/images/圖片上傳.png" width="475"/></span></p>
 <p><span></span></p>
 <p><span><img alt="" height="267" src="/images/圖片上傳2.png" width="475"/></span></p>
-<p><span> </span></p>
+<p></p>
 <p><span><img alt="" height="267" src="/images/圖片上傳3.png" width="475"/></span></p>
 <p><span></span></p>
 <p><span><img alt="" height="267" src="/images/圖片上傳4.png" width="475"/></span></p>
@@ -73,4 +73,5 @@
 <p><span><img alt="" height="267" src="/images/圖片上傳5.png" width="475"/></span></p>
 <p><span></span></p>
 <p><span><img alt="" height="267" src="/images/圖片上傳6.png" width="475"/></span></p>
+<p><span></span></p>
 <h2>W3</h2>
