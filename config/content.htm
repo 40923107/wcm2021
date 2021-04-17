@@ -11,16 +11,32 @@
 <p>用電腦教室第三磁區上課時使用 IPv6 網路協定上線，不過因為 Python 會自動用 Windows 系統中設定的 Proxy，在 Python 3.8.5 可以直接執行連結到 IPv4 網站的程式。</p>
 <h2>W2</h2>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
-<h3>About</h3>
+<p></p>
 <p>Repository:<a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></p>
 <p>Github Pages:<a href="https://40923107.github.io/wcm2021/content/index.html">https://40923107.github.io/wcm2021/content/index.html</a></p>
-<p>利用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站</p>
+<p></p>
+<p>利用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站：</p>
 <p>1.登入 Github 帳號</p>
 <p>2.將瀏覽器指向<span> <a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></span></p>
 <p>3.利用<span> </span><span>Use this template</span><span> </span>建立倉儲</p>
 <p>clone 帶有 CMSiMDE 的指令:</p>
 <div>
-<div class="syntaxhighlighter js" id="highlighter_298274"><span>git clone --recurse-submodules URL</span></div>
+<div class="syntaxhighlighter js" id="highlighter_298274">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="js plain">git clone --recurse-submodules URL</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <p>上述 URL 即為希望將倉儲資料取下進行改版的 Github 倉儲網路統一資源位置, 也就是 Github 倉儲網址.</p>
 <p>每一個以 cmstemplate 為 template 的倉儲, 其根目錄都帶有:</p>
@@ -28,19 +44,20 @@
 <p>2.<span style="background-color: #ffff00;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</p>
 <p>3.<span style="background-color: #ffff00;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</p>
 <p>4.<span style="background-color: #ffff00;">acp.bat </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</p>
-<h3>基本操作</h3>
+<p></p>
+<h3><strong>基本操作</strong></h3>
 <p>利用 cms.bat 啟用動態網站，並利用<a>https://localhost:9443</a> 在近端維護網站內容，不過動態網站只能在 localhost 啟動, 因此可以用內建的管理者密碼 "admin" 登入管理網站內容.</p>
 <p>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 config 指令修改管理者密碼.</p>
 <p>動態網站編輯表單中的 config 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p>
-<h4>編輯網站內容</h4>
+<h4><strong>編輯網站內容</strong></h4>
 <p>透過表單中的 <span style="background-color: #ffff00;">Edit All </span>或 <span style="background-color: #ffff00;">Edit </span>按鈕進行. <span style="background-color: #ffff00;">Edit</span><span> </span>用在單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的<span> </span><span style="background-color: #ffff00;">Edit </span>按鈕進入該頁面的編輯模式.</p>
 <p><span style="background-color: #ffff00;">Edit All </span>通常用在單次刪除所有頁面內容或只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中。</p>
 <p></p>
-<h4>上傳與引用檔案</h4>
-<p>File Upload 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
+<h4><strong>上傳與引用檔案</strong></h4>
+<p><span style="background-color: #ffff00;">File Upload</span> 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p></p>
-<h4>上傳與引用圖片</h4>
-<p>Image Upload 可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
+<h4><strong>上傳與引用圖片</strong></h4>
+<p><span style="background-color: #ffff00;">Image Upload </span>可以讓使用者選擇近端多個檔案上傳至動態系統中的 downloads 目錄.</p>
 <p><span><img caption="false" height="267" src="/images/圖片上傳.png" width="475"/></span></p>
 <p><span></span></p>
 <p><span><img alt="" height="267" src="/images/圖片上傳2.png" width="475"/></span></p>
@@ -54,4 +71,4 @@
 <p><span><img alt="" height="267" src="/images/圖片上傳6.png" width="475"/></span></p>
 <p><span></span></p>
 <h2>W3</h2>
-<p>123456</p>
+<p>123</p>
