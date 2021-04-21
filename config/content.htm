@@ -75,6 +75,17 @@
 <p>自選組員 6 人一組</p>
 <h2>W4</h2>
 <h2>W5</h2>
-<p><span>假如cmsimde 不是最新版本, 先進入 cmsimde 子目錄, 以 git pull origin master 拉回最新版本的程式碼, 並注意是否 cmsimde/up_dir 目錄有檔案更新, 若是則必須將這些隨著版次更新的檔案, 從 up_dir 複製到倉儲根目錄.</span></p>
-<p><span>說明如何利用 Putty 設定以 SSH 將近端版本推送至 Github</span></p>
+<p><span>將cmsimde更新到最新版本：</span></p>
+<p><span>先進入 cmsimde 子目錄, 打git pull origin master，拉回最新版本的程式碼,，從 up_dir 複製到倉儲根目錄。</span></p>
+<p><span>利用 Putty 設定以 SSH 把近端版本推送至 Github</span></p>
+<ol>
+<li>登入 Github ，選擇帳號右下方 Settings - SSH and GPG keys 備用</li>
+<li>在 start_ipv6.bat 加入<span> </span><span>set GIT_SSH=%Disk%:\putty\plink.exe</span></li>
+<li>開啟 Putty 目錄中的 puttygen.exe, 以滑鼠點擊 Generate 後, 讓滑鼠在上方空白處隨意移動, 即可建立 key, 利用滑鼠選擇 key 區域中的文字資料, 並複製到 SciTE 編輯區, 存為  id_rsa 檔, 並將此內容貼至 Github SSH key 欄位中後儲存.</li>
+<li>接下來在上一步驟中 puttygen.exe 視窗下方, 選擇<span> </span><span>Save private key</span><span> </span>後, 將 key 存為 my_key.ppk 或"學號.ppk"備用.</li>
+<li>接下來則需要在 putty.exe 中建立一個 session, 用於以 ssh 協定連線到 github.com, 而 session 名稱可以自行命名, 但是必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</li>
+<li>當利用 putty.exe 設定連線 session 時必須注意是否使用 Proxy, 以及 SSH 中的 Auth 是否對應到前面所存檔的 .ppk private key 位置.</li>
+<li>一旦 Github session 設定完成, 可以從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</li>
+</ol>
+<p><span> </span></p>
 <p></p>
