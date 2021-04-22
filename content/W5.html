@@ -123,7 +123,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='每週課程.html'>每週課程</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='基本操作.html'>基本操作</a><li><a href='編輯網站內容.html'>編輯網站內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Heroku-實作.html'>Heroku-實作</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='每週課程.html'>每週課程</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='基本操作.html'>基本操作</a><li><a href='編輯網站內容.html'>編輯網站內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Heroku.html'>Heroku</a></li>
                       </ul>
                 </nav>
               </div>
@@ -140,13 +140,13 @@ img.add_border {
 <p><span>利用 Putty 設定以 SSH 把近端版本推送至 Github</span></p>
 <p>1.登入 Github ，選擇帳號右下方 Settings - SSH and GPG keys 備用</p>
 <p><img caption="false" height="281" src="./../images/ssh key 1.png" width="500"/></p>
-<p>2.在 start_ipv4.bat 加入<span> </span><span>set GIT_SSH=%Disk%:\putty\plink.exe</span></p>
+<p>2.在 start_ipv6.bat 加入<span> </span><span>set GIT_SSH=%Disk%:\putty\plink.exe</span></p>
 <p>3.開啟 Putty 目錄中的 puttygen.exe, 點 Generate , 讓滑鼠在上方空白處隨意移動, 建立 key, 利用滑鼠選擇 key 區域中的文字資料, 複製到 SciTE 編輯區, 存為  id_rsa 檔, 並將此內容貼至 Github SSH key 欄位中後儲存.</p>
 <p><img alt="" height="281" src="./../images/ssh key 2.png" width="500"/></p>
 <p>4.在 puttygen.exe 視窗下方, 選擇<span> </span><span>Save private key</span><span> </span>, 將 key 存為 my_key.ppk 或"學號.ppk"備用.</p>
-<p>5.在 putty.exe 中建立一個 session, 用於以 ssh 協定連線到 github.com,  session 名稱自訂, 必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</p>
+<p>5.在 putty.exe 中建立一個 session，用於以 ssh 協定連線到 github.com，自訂session名稱，必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</p>
 <p>6.注意SSH 中的 Auth 是否對應到前面存檔的 .ppk private key 位置.</p>
-<p>7.Github session 設定完成後, 可以從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</p>
+<p>7.Github session 設定完成後, 從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</p>
 <p><span> </span></p>
 <br />W4 << <a href='W4.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         

@@ -10,12 +10,10 @@
 <p>從 <a href="http://a.kmol.info:88/">http://a.kmol.info:88</a> 取下 Python 3.9.1 版的可攜程式系統, 特別將需要 @gm 權限的兩階段程式系統, 從 @gm 移動到 <a href="http://a.kmol.info:88/">http://a.kmol.info:88</a>, 其中使用 sftp 與 ssh 對 a.kmol.info 進行連線。</p>
 <p>用電腦教室第三磁區上課時使用 IPv6 網路協定上線，不過因為 Python 會自動用 Windows 系統中設定的 Proxy，在 Python 3.8.5 可以直接執行連結到 IPv4 網站的程式。</p>
 <h2>W2</h2>
-<p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
-<p></p>
 <p>Repository:<a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></p>
 <p>Github Pages:<a href="https://40923107.github.io/wcm2021/content/index.html">https://40923107.github.io/wcm2021/content/index.html</a></p>
 <p></p>
-<p>利用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站：</p>
+<p>用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站：</p>
 <p>1.登入 Github 帳號</p>
 <p>2.將瀏覽器指向<span> <a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></span></p>
 <p>3.利用<span> </span><span>Use this template</span><span> </span>建立倉儲</p>
@@ -93,10 +91,9 @@
 <h2>W6</h2>
 <h2><span>W7</span></h2>
 <h3>Heroku-實作</h3>
-<p><span>步驟一:</span><span> </span>(<span>建立 Heroku 帳號</span>) 進入<span> </span><a href="https://heroku.com/">https://heroku.com</a>, 利用學校配發的 @gm 登記一個 Heroku 帳號, 關鍵在於密碼設定必須要至少 8 個字元, 且字元中必須包含符號, 英文字母及數字,  並且登記後要進入 @gm 帳號進行確認後才能開通 Heroku 帳號.</p>
-<p>完成帳號登記後, 必須知道目前 Heroku 只允許免費建立五個應用程式, 且每個程式的最大容量為 500MB.</p>
-<p><span>步驟二:</span><span> </span>(<span>建立 Heroku app</span>) 登入 Heroku 後, 先以 s + 學號 建立第一個 app, 完成後, 將可至 https://s學號.herokuapp.com 連線取得網站最初內容.</p>
-<p><span>步驟三:</span><span> </span>(下載 Heroku CLI) 從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解開至隨身碟 Y: 所在位置或者是 Hybrid 設定的位置.</p>
+<p>1.<span>建立 Heroku 帳號：</span>進入<span> </span><a href="https://heroku.com/">https://heroku.com</a>，用學校gmail登記一個 Heroku 帳號。</p>
+<p><span>2.</span><span>建立 Heroku app：</span>登入 Heroku 後, 以 s + 學號建立第一個 app。</p>
+<p><span>3.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
 <p><span>步驟四:</span><span> </span>(<span>修改命令搜尋路徑</span>) 修改隨身系統的啟動批次檔案, 讓 Windows 的命令視窗中可以執行 heroku.exe, 或者稱作"設法將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一".</p>
 <p>重新啟動已經納入可執行 heroku.exe 的隨身碟 start_ipv6.bat 或 start_ipv4.bat</p>
 <p><span>步驟五:</span><span> </span>(<span>測試 heroku 執行</span>) 測試是否能夠在修改後的命令列中執行 heroku.exe, 輸入 heroku version 若回應所使用的版本表示上述路徑設定已經成功.</p>
