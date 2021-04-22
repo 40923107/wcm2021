@@ -12,7 +12,6 @@
 <h2>W2</h2>
 <p>Repository:<a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></p>
 <p>Github Pages:<a href="https://40923107.github.io/wcm2021/content/index.html">https://40923107.github.io/wcm2021/content/index.html</a></p>
-<p></p>
 <p>用 cmstemplate 建立以 CMSiMDE 作為子模組的動態與靜態網站：</p>
 <p>1.登入 Github 帳號</p>
 <p>2.將瀏覽器指向<span> <a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></span></p>
@@ -41,12 +40,10 @@
 <p>1.<span style="background-color: #ffff00;">init.py</span> - 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號.</p>
 <p>2.<span style="background-color: #ffff00;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</p>
 <p>3.<span style="background-color: #ffff00;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</p>
-<p>4.<span style="background-color: #ffff00;">acp.bat </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</p>
+<p>4.<span style="background-color: #ffff00;">acp.bat </span>- 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ， git commit -m "提交訊息", 以及 git push 等三個指令.</p>
 <p></p>
 <h3><strong>基本操作</strong></h3>
-<p>利用 cms.bat 啟用動態網站，並利用<a>https://localhost:9443</a> 在近端維護網站內容，不過動態網站只能在 localhost 啟動, 因此可以用內建的管理者密碼 "admin" 登入管理網站內容.</p>
-<p>假如使用者修改 init.py 中的 ip 或 uwsgi 設定, 讓動態網站在外部 IP 啟動, 則必須自行透過動態網站中的 config 指令修改管理者密碼.</p>
-<p>動態網站編輯表單中的 config 除了可更改網站管理者密碼外, 也可以更改網站的頁面內容標題 (外部標題可以透過 init.py 中的 site_title 更改).</p>
+<p>利用 cms.bat 啟用動態網站，利用<a>https://localhost:9443</a> 在近端維護網站內容，用 "admin" 登入管理網站內容.</p>
 <h3><strong>編輯網站內容</strong></h3>
 <p>透過表單中的 <span style="background-color: #ffff00;">Edit All </span>或 <span style="background-color: #ffff00;">Edit </span>按鈕進行. <span style="background-color: #ffff00;">Edit</span><span> </span>用在單頁編輯, 操作時先選擇左側的頁面標題, 等系統顯示該頁面內容後, 再點擊上方的<span> </span><span style="background-color: #ffff00;">Edit </span>按鈕進入該頁面的編輯模式.</p>
 <p><span style="background-color: #ffff00;">Edit All </span>通常用在單次刪除所有頁面內容或只保留特定頁面用, 點擊後會將所有頁面內容置於編輯器中。</p>
@@ -72,7 +69,7 @@
 <h2>W3</h2>
 <p></p>
 <h2>W4</h2>
-<p>自選組員`,6 人一組</p>
+<p>自選組員，6 人一組</p>
 <p>組員：40923102、40923104、40923105、40923106、40923107、40923110</p>
 <h2>W5</h2>
 <p><span>將cmsimde更新到最新版本：</span></p>
@@ -80,27 +77,24 @@
 <p><span>利用 Putty 設定以 SSH 把近端版本推送至 Github</span></p>
 <p>1.登入 Github ，選擇帳號右下方 Settings - SSH and GPG keys 備用</p>
 <p><img caption="false" height="281" src="/images/ssh key 1.png" width="500"/></p>
-<p>2.在 start_ipv4.bat 加入<span> </span><span>set GIT_SSH=%Disk%:\putty\plink.exe</span></p>
+<p>2.在 start_ipv6.bat 加入<span> </span><span>set GIT_SSH=%Disk%:\putty\plink.exe</span></p>
 <p>3.開啟 Putty 目錄中的 puttygen.exe, 點 Generate , 讓滑鼠在上方空白處隨意移動, 建立 key, 利用滑鼠選擇 key 區域中的文字資料, 複製到 SciTE 編輯區, 存為  id_rsa 檔, 並將此內容貼至 Github SSH key 欄位中後儲存.</p>
 <p><img alt="" height="281" src="/images/ssh key 2.png" width="500"/></p>
 <p>4.在 puttygen.exe 視窗下方, 選擇<span> </span><span>Save private key</span><span> </span>, 將 key 存為 my_key.ppk 或"學號.ppk"備用.</p>
-<p>5.在 putty.exe 中建立一個 session, 用於以 ssh 協定連線到 github.com,  session 名稱自訂, 必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</p>
+<p>5.在 putty.exe 中建立一個 session，用於以 ssh 協定連線到 github.com，自訂session名稱，必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</p>
 <p>6.注意SSH 中的 Auth 是否對應到前面存檔的 .ppk private key 位置.</p>
-<p>7.Github session 設定完成後, 可以從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</p>
+<p>7.Github session 設定完成後, 從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</p>
 <p><span> </span></p>
 <h2>W6</h2>
 <h2><span>W7</span></h2>
-<h3>Heroku-實作</h3>
+<h3>Heroku</h3>
 <p>1.<span>建立 Heroku 帳號：</span>進入<span> </span><a href="https://heroku.com/">https://heroku.com</a>，用學校gmail登記一個 Heroku 帳號。</p>
 <p><span>2.</span><span>建立 Heroku app：</span>登入 Heroku 後, 以 s + 學號建立第一個 app。</p>
 <p><span>3.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
-<p><span>步驟四:</span><span> </span>(<span>修改命令搜尋路徑</span>) 修改隨身系統的啟動批次檔案, 讓 Windows 的命令視窗中可以執行 heroku.exe, 或者稱作"設法將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一".</p>
-<p>重新啟動已經納入可執行 heroku.exe 的隨身碟 start_ipv6.bat 或 start_ipv4.bat</p>
-<p><span>步驟五:</span><span> </span>(<span>測試 heroku 執行</span>) 測試是否能夠在修改後的命令列中執行 heroku.exe, 輸入 heroku version 若回應所使用的版本表示上述路徑設定已經成功.</p>
-<p><span>步驟六:</span><span> </span>(<span>設定 heroku 代理主機</span>) 先前我們已經知道網路的應用包含 client 與 server, 不同 client 採用不同的 proxy 設定與 server 連線, 其中 firefox 作為 WWW 網路協定的 client, 有其自己的網路 Proxy 設定, 也可以直接使用操作系統的 Proxy 設定.</p>
-<p>Chrome 作為 WWW 網路協定的 client, 目前 Windows 下的最新版, 只能使用操作系統的 Proxy 設定.</p>
-<p>而 git 作為 git client 與 github server 連線的 Proxy 設定, 則寫在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
-<p>相同的道理 heroku cli 作為<span> </span><a href="https://heroku.com/">https://heroku.com</a><span> </span>伺服器的 client 端, 也有其 Proxy 的設定方式, 也就是在 start_ipv6.bat 中加入:</p>
+<p><span>4.</span><span>修改命令搜尋路徑：</span> 修改隨身系統的啟動批次檔案，讓 Windows 的命令視窗中可以執行 heroku.exe，（將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一），再重新啟動start_ipv4 / ipv6.bat</p>
+<p>5.<span>測試 heroku 執行：打</span> heroku version 看有沒有回應使用版本。</p>
+<p><span>6.</span><span>設定 heroku 代理主機：</span>在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
+<p>在 start_ipv6.bat 中加入:</p>
 <div>
 <div class="syntaxhighlighter js" id="highlighter_610730">
 <table border="0" cellpadding="0" cellspacing="0">
@@ -123,10 +117,8 @@
 </table>
 </div>
 </div>
-<p><span>步驟七:</span><span> </span>(<span>設定同步倉儲</span>) 針對利用 Heroku 同步 Github Pages 上的網站內容, 只需要透過 git remote add (Heroku 指令為 heroku git:remote -a heroku_倉儲_名稱, 之後只要在 heroku login 狀態下, 可以直接利用 git push) 在近端設定一個連線到 Heroku 倉儲的代號, 就能在每次更新 Github Pages 倉儲後, 再將內容同步至 Heroku. 網際內容管理課程將使用兩種 Heroku app 設定, 也就是靜態網頁與動態網頁:</p>
-<p>靜態網頁 - 採用 php 方式部署, 讓 Heroku 將靜態網頁視為 PHP 程式, 利用 index.php 跳轉到 index.html</p>
-<p>動態網頁 - 讓 Heroku 執行 cmsimde/wsgi.py 的方式進行雲端伺服.</p>
-<p><span>步驟八:</span><span> </span>(<span>以 git 進行提交推送</span>) 利用 heroku git:remote -a 設定的同步倉儲其推送名稱內定為 "heroku", 使用者只要使用 git push heroku 就可以將改版內容推送到對應的 Heroku app 倉儲.</p>
+<p><span>7.</span><span>設定同步倉儲：</span>透過 git remote add (Heroku 指令：heroku git:remote -a heroku_倉儲_名稱，之後在 heroku login 狀態下，直接用 git push) 在近端設定一個連線到 Heroku 倉儲的代號，在每次更新 Github Pages 倉儲後，把同步至 Heroku。</p>
+<p><span>8.</span><span>以 git 進行提交推送：</span>用 heroku git:remote -a 設定的同步倉儲其推送名稱內定為 "heroku", 用 git push heroku 將改版內容推送到對應的 Heroku app 倉儲.</p>
 <p>指令操作步驟:</p>
 <div>
 <div class="syntaxhighlighter py" id="highlighter_615811">
@@ -152,6 +144,7 @@
 </table>
 </div>
 </div>
-<p>上述步驟完成後的 Heroku 網站:<span> </span><a href="https://taiwan-no1.herokuapp.com/">https://taiwan-no1.herokuapp.com</a></p>
+<p>Heroku 網站 : <a href="https://dashboard.heroku.com/apps/s40923107">https://dashboard.heroku.com/apps/s40923107</a></p>
+<p></p>
 <p><span></span></p>
 <p></p>

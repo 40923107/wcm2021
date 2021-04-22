@@ -135,12 +135,11 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W7 << <a href='W7.html'>Previous</a> <br /><h1>Heroku</h1>
-<p>1.<span>建立 Heroku 帳號：</span>進入<span> </span><a href="https://heroku.com/">https://heroku.com</a>，用學校gmail登記一個 Heroku 帳號。</p>
-<p><span>2.</span><span>建立 Heroku app：</span>登入 Heroku 後, 以 s + 學號建立第一個 app。</p>
-<p><span>3.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
-<p><span>4.</span><span>修改命令搜尋路徑：</span> 修改隨身系統的啟動批次檔案，讓 Windows 的命令視窗中可以執行 heroku.exe，（將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一），再重新啟動start_ipv4 / ipv6.bat</p>
-<p>5.<span>測試 heroku 執行：打</span> heroku version 看有沒有回應使用版本。</p>
-<p><span>6.</span><span>設定 heroku 代理主機：</span>在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
+<p><span>1.</span><span>建立 Heroku app：</span>登入 Heroku 後, 以 s + 學號建立第一個 app。</p>
+<p><span>2.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
+<p><span>3.</span><span>修改命令搜尋路徑：</span> 修改隨身系統的啟動批次檔案，讓 Windows 的命令視窗中可以執行 heroku.exe，（將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一），再重新啟動start_ipv4 / ipv6.bat</p>
+<p>4.<span>測試 heroku 執行：打</span> heroku version 看有沒有回應使用版本。</p>
+<p><span>5.</span><span>設定 heroku 代理主機：</span>在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
 <p>在 start_ipv6.bat 中加入:</p>
 <div>
 <div class="syntaxhighlighter js" id="highlighter_610730">
@@ -164,8 +163,8 @@ img.add_border {
 </table>
 </div>
 </div>
-<p><span>7.</span><span>設定同步倉儲：</span>透過 git remote add (Heroku 指令：heroku git:remote -a heroku_倉儲_名稱，之後在 heroku login 狀態下，直接用 git push) 在近端設定一個連線到 Heroku 倉儲的代號，在每次更新 Github Pages 倉儲後，把同步至 Heroku。</p>
-<p><span>8.</span><span>以 git 進行提交推送：</span>用 heroku git:remote -a 設定的同步倉儲其推送名稱內定為 "heroku", 用 git push heroku 將改版內容推送到對應的 Heroku app 倉儲.</p>
+<p><span>6.設定同步倉儲：</span>透過 git remote add (Heroku 指令：heroku git:remote -a heroku_倉儲_名稱，之後在 heroku login 狀態下，直接用 git push) 在近端設定一個連線到 Heroku 倉儲的代號，在每次更新 Github Pages 倉儲後，把同步至 Heroku。</p>
+<p><span>7.</span><span>以 git 進行提交推送：</span>用 heroku git:remote -a 設定的同步倉儲其推送名稱內定為 "heroku", 用 git push heroku 將改版內容推送到對應的 Heroku app 倉儲.</p>
 <p>指令操作步驟:</p>
 <div>
 <div class="syntaxhighlighter py" id="highlighter_615811">
