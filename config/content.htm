@@ -163,8 +163,8 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 <p><span>2.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
 <p><span>3.</span><span>修改命令搜尋路徑：</span> 修改隨身系統的啟動批次檔案，讓 Windows 的命令視窗中可以執行 heroku.exe，（將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一），再重新啟動start_ipv4 / ipv6.bat</p>
 <p>4.<span>測試 heroku 執行：打</span> heroku version 看有沒有回應使用版本。</p>
-<p><span>5.</span><span>設定 heroku 代理主機：</span>在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
-<p>在 start_ipv6.bat 中加入:</p>
+<p><span>5.</span><span>設定 heroku 代理主機：因為我們用自己的筆電，因此改</span>在 y:\home_ipv4 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
+<p>在 start_ipv4.bat 中加入:</p>
 <div>
 <div class="syntaxhighlighter js" id="highlighter_610730">
 <table border="0" cellpadding="0" cellspacing="0">
@@ -203,7 +203,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </td>
 <td class="code">
 <div class="container">
-<div class="line number1 index0 alt2"><code class="py comments"># 以 interactive 模式登入 Heroku, 完成後產生 y:\home_ipv6\_netrc</code></div>
+<div class="line number1 index0 alt2"><code class="py comments"># 以 interactive 模式登入 Heroku, 完成後產生 y:\home_ipv4\_netrc</code></div>
 <div class="line number2 index1 alt1"><code class="py plain">heroku login </code><code class="py keyword">-</code><code class="py plain">i</code></div>
 <div class="line number3 index2 alt2"><code class="py comments"># 針對已經登入的 Heroku 帳號下的 taiwan-01 app, 設為此倉儲的 remote 同步倉儲, 且在倉儲中會自建名稱為 heroku 的 remoate site.</code></div>
 <div class="line number4 index3 alt1"><code class="py plain">heroku git:remote </code><code class="py keyword">-</code><code class="py plain">a taiwan</code><code class="py keyword">-</code><code class="py plain">no1</code></div>
@@ -217,7 +217,17 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 <p>Heroku 網站 : <a href="https://dashboard.heroku.com/apps/s40923107">https://dashboard.heroku.com/apps/s40923107</a></p>
 <h2>w8</h2>
 <p>期中報告</p>
-<h2>W9</h2>
+<h2>W11</h2>
+<p>到 ipv4.bat 編輯</p>
+<p><img alt="" height="450" src="/images/打kmolab.png" width="800"/></p>
 <p></p>
+<p>啟動 ipv4.bat，執行 pip install robodk</p>
+<p><span><img caption="false" height="450" src="/images/打pip.png" width="800"/></span></p>
+<p><span></span></p>
+<p><span>拉 pick_and_place.py 到 SciTE 編輯器中</span></p>
+<p><span><img alt="" height="450" src="/images/拉.py到白窗.png" width="800"/></span></p>
+<p><span></span></p>
+<p><span>Tools go</span></p>
+<p><span><img alt="" height="450" src="/images/tools go 機器就會動起來.png" width="800"/></span></p>
 <p><span></span></p>
 <p></p>

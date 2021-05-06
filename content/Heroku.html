@@ -123,7 +123,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='WCM2021.html'>WCM2021</a><li class='has-children'><a href='每週課程.html'>每週課程</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='基本操作.html'>基本操作</a><li><a href='編輯網站內容.html'>編輯網站內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a><li><a href='嵌入程式碼.html'>嵌入程式碼</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Heroku.html'>Heroku</a></li></ul><li><a href='w8.html'>w8</a><li><a href='W9.html'>W9</a></li>
+                     <li><a href='WCM2021.html'>WCM2021</a><li class='has-children'><a href='每週課程.html'>每週課程</a><ul class='dropdown'><li><a href='W1.html'>W1</a><li class='has-children'><a href='W2.html'>W2</a><ul class='dropdown'><li><a href='基本操作.html'>基本操作</a><li><a href='編輯網站內容.html'>編輯網站內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a><li><a href='嵌入程式碼.html'>嵌入程式碼</a></li></ul><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li class='has-children'><a href='W7.html'>W7</a><ul class='dropdown'><li><a href='Heroku.html'>Heroku</a></li></ul><li><a href='w8.html'>w8</a><li><a href='W11.html'>W11</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,8 +139,8 @@ img.add_border {
 <p><span>2.</span><span>下</span>載 Heroku CLI：從<span> </span><a href="http://a.kmol.info:88/heroku.7z">http://a.kmol.info:88/heroku.7z</a><span> </span>下載 Heroku cli 程式檔案, 解壓縮到電腦。</p>
 <p><span>3.</span><span>修改命令搜尋路徑：</span> 修改隨身系統的啟動批次檔案，讓 Windows 的命令視窗中可以執行 heroku.exe，（將 heroku.exe 所在目錄位置, 設為 Windows 搜尋路徑之一），再重新啟動start_ipv4 / ipv6.bat</p>
 <p>4.<span>測試 heroku 執行：打</span> heroku version 看有沒有回應使用版本。</p>
-<p><span>5.</span><span>設定 heroku 代理主機：</span>在 y:\home_ipv6 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
-<p>在 start_ipv6.bat 中加入:</p>
+<p><span>5.</span><span>設定 heroku 代理主機：因為我們用自己的筆電，因此改</span>在 y:\home_ipv4 下的 .giconfig 中,  以 git config --global http.proxy "http://your_proxy:port" 進行設定.</p>
+<p>在 start_ipv4.bat 中加入:</p>
 <div>
 <div class="syntaxhighlighter js" id="highlighter_610730">
 <table border="0" cellpadding="0" cellspacing="0">
@@ -179,7 +179,7 @@ img.add_border {
 </td>
 <td class="code">
 <div class="container">
-<div class="line number1 index0 alt2"><code class="py comments"># 以 interactive 模式登入 Heroku, 完成後產生 y:\home_ipv6\_netrc</code></div>
+<div class="line number1 index0 alt2"><code class="py comments"># 以 interactive 模式登入 Heroku, 完成後產生 y:\home_ipv4\_netrc</code></div>
 <div class="line number2 index1 alt1"><code class="py plain">heroku login </code><code class="py keyword">-</code><code class="py plain">i</code></div>
 <div class="line number3 index2 alt2"><code class="py comments"># 針對已經登入的 Heroku 帳號下的 taiwan-01 app, 設為此倉儲的 remote 同步倉儲, 且在倉儲中會自建名稱為 heroku 的 remoate site.</code></div>
 <div class="line number4 index3 alt1"><code class="py plain">heroku git:remote </code><code class="py keyword">-</code><code class="py plain">a taiwan</code><code class="py keyword">-</code><code class="py plain">no1</code></div>
