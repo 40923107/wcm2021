@@ -135,7 +135,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W4 << <a href='W4.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W5</h1>
-<p><span>將cmsimde更新到最新版本：</span></p>
+<p><span>cmsimde更新：</span></p>
 <p><span>先進入 cmsimde 子目錄, 打git pull origin master，拉回最新版本的程式碼,，從 up_dir 複製到倉儲根目錄。</span></p>
 <p><span>利用 Putty 設定以 SSH 把近端版本推送至 Github</span></p>
 <p>1.登入 Github ，選擇帳號右下方 Settings - SSH and GPG keys 備用</p>
@@ -144,9 +144,15 @@ img.add_border {
 <p>3.開 Putty 目錄中的 puttygen.exe，點 Generate，滑鼠在上方空白處隨意移動，建立 key，選擇 key 區域中的文字資料，複製到 SciTE 編輯區，存成  id_rsa 檔，再複製貼到 Github SSH key 儲存。</p>
 <p><img alt="" height="281" src="./../images/ssh key 2.png" width="500"/></p>
 <p>4.在 puttygen.exe 視窗下方, 選擇<span> </span><span>Save private key</span><span> </span>, 將 key 存為 my_key.ppk 或"學號.ppk"備用.</p>
-<p>5.在 putty.exe 中建立一個 session，用於以 ssh 協定連線到 github.com，自訂session名稱，必須與倉儲 .git 目錄中 config 的連線 url session 名稱對應.</p>
-<p>6.注意SSH 中的 Auth 是否對應到前面存檔的 .ppk private key 位置.</p>
-<p>7.Github session 設定完成後, 從 [HKEY_CURRENT_USER\SOFTWARE\SimonTatham] 將 registry 設定匯出存為 y:\my_github.reg, 並在 start_ipv6.bat 中以  regedit.exe /S y:\my_github.reg 將設定匯入.</p>
+<p>5.在 putty.exe 中建立 session，以 ssh 協定連線到 github.com，自訂session名稱，和倉儲 .git 中 config 的連線 url session 名稱對應。由於我們使用自己的筆電，不用設定proxy。</p>
+<p><img alt="" height="451" src="https://40923105.github.io/wcm2021/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A22.png" width="498"/></p>
+<p>6.到 Auth 確認是否找到 .ppk private key 的位置.</p>
+<p><img alt="" height="452" src="https://40923105.github.io/wcm2021/images/%E6%93%B7%E5%8F%961.PNG" width="498"/></p>
+<p><span>7.&gt; 在 start_ipv.bat 中設定 </span><span>set<span> </span><span>GIT_SSH=%Disk%:\putty\plink.exe</span></span><span><span> </span>會讓原本 Github 倉儲中</span><span><span> </span>.git/config url 指向 domain name 的機制， 轉為透過 Putty 設定的 session 名稱連線</span></p>
+<p>當倉儲使用github.com push 必須修改.git &gt; config 中的 url 格式</p>
+<p>1.先以半形 # 去註解 Https 的連線設定</p>
+<p>2.git@<span>session</span>:帳號/倉儲.git <span> </span><span>※</span>Session 名稱為自己在<span>putty.exe中所設定的 session</span></p>
+<p><img alt="" height="540" src="https://40923105.github.io/wcm2021/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%963.png" width="507"/></p>
 <p><span> </span></p>
 <br />W4 << <a href='W4.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
