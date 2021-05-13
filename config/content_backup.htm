@@ -1,5 +1,40 @@
 <h1>WCM2021 </h1>
 <p>組員：<span>40923102、40923104、40923105、40923106、40923107、40923110</span></p>
+<h1>教室</h1>
+<table height="129" width="379">
+<tbody>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+<tr>
+<td style="width: 117.778px;"></td>
+<td style="width: 119.556px;"></td>
+<td style="width: 120.444px;"></td>
+</tr>
+</tbody>
+</table>
 <h1>每週課程</h1>
 <h2>W1</h2>
 <p>至 <a href="http://a.kmol.info:88/">http://a.kmol.info:88</a> 下載 Python 3.9.1 版的可攜程式系統 kmol2021_v2_spring</p>
@@ -167,24 +202,25 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 <p>在 start_ipv4.bat 中加入:</p>
 <div>
 <div class="syntaxhighlighter js" id="highlighter_610730">
-<table border="0" cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 393.667px;">
 <tbody>
 <tr>
-<td class="gutter" style="width: 7.77778px;">
+<td class="gutter" style="width: 7px;">
 <div class="line number1 index0 alt2">1</div>
 <div class="line number2 index1 alt1">2</div>
 <div class="line number3 index2 alt2">3</div>
 </td>
-<td class="code" style="width: 330.444px;">
+<td class="code" style="width: 379.667px;">
 <div class="container">
 <div class="line number1 index0 alt2"><code class="js plain">REM </code><code class="js keyword">for</code> <code class="js plain">heroku login</code></div>
-<div class="line number2 index1 alt1"><code class="js plain">set HTTP_PROXY=http:</code><code class="js comments">//[2001:288:6004:17::53]:3128</code></div>
-<div class="line number3 index2 alt2"><code class="js plain">set HTTPS_PROXY=http:</code><code class="js comments">//[2001:288:6004:17::53]:3128</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">REM set HTTP_PROXY=http:</code><code class="js comments">//[2001:288:6004:17::53]:3128</code></div>
+<div class="line number3 index2 alt2"><code class="js plain">REM set HTTPS_PROXY=http:</code><code class="js comments">//[2001:288:6004:17::53]:3128</code></div>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
+<p>因為是使用自己的筆電，要在開頭打上 REM 使它變成註解。</p>
 </div>
 </div>
 <p><span>6.設定同步倉儲：</span>透過 git remote add (Heroku 指令：heroku git:remote -a heroku_倉儲_名稱，之後在 heroku login 狀態下，直接用 git push) 在近端設定一個連線到 Heroku 倉儲的代號，在每次更新 Github Pages 倉儲後，把同步至 Heroku。</p>
