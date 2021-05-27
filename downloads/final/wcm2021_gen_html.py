@@ -1,10 +1,9 @@
 # stage3_gen_html.py
 studList = "wcm2021_list.txt"
-courTitle = "cd2021"
+courTitle = "wcm2021"
 
 # group title initial
-grpTitle = studList[:6] + "-" + studList[8] + "g"
-
+grpTitle = studList[:7] + "-" + "-ag"
 # student Account and github Account as inputs
 def perWeb(s, g):
     pSite = "<a href=\"https://" + g + ".github.io/" + courTitle + "\">" + s + " web</a>"
