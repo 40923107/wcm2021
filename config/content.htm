@@ -5,13 +5,14 @@
 <p><span></span></p>
 <p><span>個人倉儲：<a href="https://github.com/40923107/wcm2021">https://github.com/40923107/wcm2021</a></span></p>
 <p><span>小組倉儲：<a href="https://github.com/40923107/wcm2021-ag2">https://github.com/40923107/wcm2021-ag2</a></span></p>
-<p><span>Heroku :</span><span><a href="https://dashboard.heroku.com/apps/a40923107">https://dashboard.heroku.com/apps/a40923107</a></span></p>
+<p><span>個人 Heroku :</span><span><a href="https://dashboard.heroku.com/apps/a40923107">https://dashboard.heroku.com/apps/a40923107</a></span></p>
+<p><span>小組 Heroku：<a href="https://wcm2021-ag2.herokuapp.com/content/index.html">https://wcm2021-ag2.herokuapp.com/content/index.html</a></span></p>
 <p><span>fossil : </span><span><a href="https://fossil.kmol.info/u/40923107/index">https://fossil.kmol.info/u/40923107/index</a></span></p>
 <p><span>           <a href="https://fossil.kmol.info/u/40923107/doc/trunk/content/">https://fossil.kmol.info/u/40923107/doc/trunk/content/</a></span></p>
 <p><span>Gitlab：<a href="https://gitlab.com/40923107/wcm2021">https://gitlab.com/40923107/wcm2021</a></span></p>
 <p><span> </span></p>
 <p><strong>心得</strong></p>
-<p><strong></strong></p>
+<p><strong></strong>再建立並執行 Fossil、Heroku、RoboDK、Gitlab 及其他程式、軟體的操作過程中，學到如何架設網站、編寫程式、理解各種程式碼，且在操作遇到問題時，能理解電腦再說甚麼，並上網找解決方法、跟組員討論。另外，在遇到各種問題時，之前還不習慣做紀錄，現在已經習慣在上課時做筆記，並把所有操作過程即時做照片紀錄或影片紀錄，這樣不只能加深印象，還能教遇到同樣問題的組員。</p>
 <h1>Fossil</h1>
 <p>個人操作影片：<a href="https://youtu.be/NNNjrHc922Q">https://youtu.be/NNNjrHc922Q</a></p>
 <p>小組操作教學影片：</p>
@@ -30,6 +31,16 @@
 <p><img alt="" height="591" src="/images/複製wcm2021.PNG" width="800"/></p>
 <p><img alt="" height="709" src="/images/fossil_a-3.png" width="800"/></p>
 <p><img alt="" height="301" src="/images/fossil_a-4.png" width="800"/></p>
+<p></p>
+<p>4.之後推 Github 倉儲內容到 Fossil ，要先 git pull 倉儲內容下來</p>
+<p><img alt="" height="647" src="/images/推成功 fossil git pull.PNG" width="857"/></p>
+<p></p>
+<p>5.再推上去 Fossil</p>
+<p><img alt="" height="207" src="/images/推成功 fossil commit.PNG" width="1000"/></p>
+<p></p>
+<h2>遇到的問題：</h2>
+<p>Fossil 也可以用 cms 編輯網站，但不能 acp 推到 Github，要用 fossil commit 推，否則會和 github 倉儲網站內容衝突。</p>
+<p></p>
 <h1>網路環境</h1>
 <p>介紹影片：<a href="https://youtu.be/ULUfzM2oB7I">https://youtu.be/ULUfzM2oB7I</a></p>
 <p></p>
@@ -104,10 +115,17 @@
 </tr>
 </tbody>
 </table>
+<p></p>
+<p>之後推 github 倉儲網站內容內容到 Heroku </p>
+<p><img alt="" height="808" src="/images/推成功 heroku.PNG" width="1000"/></p>
 </div>
 </div>
 <p></p>
 <h1>網路直播</h1>
+<p>OBS 操作影片：<a href="https://youtu.be/N3TDgd1OhwQ">https://youtu.be/N3TDgd1OhwQ</a></p>
+<p>先到網路上下載 OBS</p>
+<p>之後等以下建立頻道手機驗證完成後在執行 OBS 直播</p>
+<p></p>
 <p>1.建立頻道</p>
 <p><img alt="" height="553" src="/images/yt 你的頻道 2.png" width="300"/></p>
 <p></p>
@@ -192,11 +210,14 @@
 </div>
 <p>將倉儲資料取下進行改版的 Github 倉儲網路統一資源位置，也就是 Github 倉儲網址。</p>
 <p>每一個以 cmstemplate 為 template 的倉儲，根目錄都帶有:</p>
-<p>1.<span style="background-color: #ffff00;">init.py</span> - 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 則是動態網站啟動時所佔用的埠號.</p>
+<p>1.<span style="background-color: #ffff00;">init.py</span> - 其中的 site_title, ip 與 port 可以讓使用者自行修改, site_title 是網站標題, ip 為動態網站啟動時所使用的網路位址, 可設為內部或外部 IPv4 (IPv6), port 是動態網站啟動時所佔用的埠號.</p>
 <p>2.<span style="background-color: #ffff00;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</p>
 <p>3.<span style="background-color: #ffff00;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</p>
-<p>4.<span style="background-color: #ffff00;">acp.bat </span>- 若使用者已經將倉儲設為 ssh 連線，且提供遠端與近端的認證模式，則可以在執行此批次指令之後加上提交字串，即可執行 git add，git commit -m "提交訊息"，以及 git push 等三個指令.</p>
+<p>4.<span style="background-color: #ffff00;">acp.bat </span>- 若已將倉儲設為 ssh 連線，可以在執行此批次指令之後加上提交字串，即可執行 git add，git commit -m "提交訊息"，及 git push 等三個指令.</p>
 <p></p>
+<p>開始編輯並推送個人倉儲網站內容</p>
+<p><img alt="" height="460" src="/images/推成功 github.PNG" width="1000"/></p>
+<p><img alt="" height="745" src="/images/推成功 github 2.PNG" width="1384"/></p>
 <h3>基本操作</h3>
 <p>利用 cms.bat 啟用動態網站，利用<a>https://localhost:9443</a> 在近端維護網站內容，用 "admin" 登入管理網站內容。</p>
 <h3>編輯網站內容</h3>
@@ -486,6 +507,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0730</p>
 <table border="1">
 <tbody>
@@ -680,6 +702,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0760</p>
 <table border="1">
 <tbody>
@@ -874,6 +897,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0810</p>
 <table border="1">
 <tbody>
@@ -1068,6 +1092,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0820</p>
 <table border="1">
 <tbody>
@@ -1262,6 +1287,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0823</p>
 <table border="1">
 <tbody>
@@ -1456,6 +1482,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0830</p>
 <table border="1">
 <tbody>
@@ -1650,6 +1677,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 </tr>
 </tbody>
 </table>
+<p></p>
 <p>BGA0842</p>
 <table border="1">
 <tbody>
@@ -2589,6 +2617,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 <p><span></span></p>
 <h2>W12</h2>
 <p>OBS + Youtube 分組直播錄影</p>
+<p>下載OBS等操作，可點開 "網路直播" 標題查看內容</p>
 <p>1.建立頻道</p>
 <p><img alt="" height="553" src="/images/yt 你的頻道 2.png" width="300"/></p>
 <p></p>
@@ -2597,6 +2626,7 @@ os.system("start file:///" + str(filePath) + "\\w1_class_local.html")
 <p></p>
 <p>3.完成手機驗證</p>
 <p><img alt="" height="450" src="/images/yt驗證2.png" width="800"/></p>
+<p></p>
 <h2>W13</h2>
 <p>開始遠距教學</p>
 <p></p>
